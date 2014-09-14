@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+    "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="r.name">
+		<field-validator type="requiredstring">
+			<message>Name cannot be left blank!!!</message>
+		</field-validator>
+	</field>
+
+	<field name="r.address">
+		<field-validator type="requiredstring">
+			<message>Address cannot be left blank!!!</message>
+		</field-validator>
+	</field>
+
+	<field name="r.username">
+		<field-validator type="requiredstring">
+			<message>username cannot be left blank!!!</message>
+		</field-validator>
+	</field>
+	
+	<field name="r.password">
+		<field-validator type="requiredstring">
+			<message>Password cannot be left blank!!!</message>
+		</field-validator>
+	</field>
+
+	<field name="r.age">
+		<field-validator type="required">
+			<message>Age cannot be left blank!!!</message>
+		</field-validator>
+		<field-validator type="int">
+			<param name="min">20</param>
+			<param name="max">60</param>
+			<message>Age is can be between 20 to 60 only!!!</message>
+		</field-validator>
+	</field>
+
+	<field name="r.mobile">
+		<field-validator type="required">
+			<message>Mobile no. cannot be left blank!!!</message>
+		</field-validator>
+	</field>
+	
+	<field name="r.email">
+		<field-validator type="requiredstring">
+			<message>Email cannot be empty</message>
+		</field-validator>
+		<field-validator type="email">
+			<message>Email is invalid!!!</message>
+		</field-validator>
+	</field>
+	
+	
+</validators>    

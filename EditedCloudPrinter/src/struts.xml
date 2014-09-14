@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="Register" class="com.CloudPrinting.controller.Registration">
+			<result name="success">/Registration.jsp</result>
+			<result name="useralreadyexists">/Registration.jsp</result>
+			<result name="input">/Registration.jsp</result>
+			<result name="checkInternetOrMail">/Registration.jsp</result>
+		</action>
+		<action name="login" class="com.CloudPrinting.controller.Login"
+			method="login">
+			<result name="registered">/firstpage.jsp</result>
+			<result name="notregistered">/index.jsp</result>
+			<result name="error">/index.jsp</result>
+
+		</action>
+		<action name="logout" class="com.CloudPrinting.controller.Login"
+			method="logout">
+			<result name="logoutsuccess">/index.jsp</result>
+			<result name="logoutfailure">/home.jsp</result>
+		</action>
+		<action name="upload" class="com.CloudPrinting.controller.FileUpload">
+			<result name="success">/home.jsp</result>
+			<result name="error">/upload.jsp</result>
+			<result name="input">/upload.jsp</result>
+		</action>
+		<action name="showfiles" class="com.CloudPrinting.controller.ShowFiles">
+			<result name="success">/showfiles.jsp</result>
+				<result name="nodatafound">/filenotfound.jsp</result>
+			<result name="error">/errorshowfiles.jsp</result>
+		</action>
+		<action name="openfile" class="com.CloudPrinting.controller.OpenFile">
+			<result name="success">/openfile.jsp</result>
+			<result name="error">/filenotfound.jsp</result>
+		</action>
+		<action name="print" class="com.CloudPrinting.controller.printpage">
+			<result name="success">/printsuccess.jsp</result>
+			<result name="printfailure">/printfailure.jsp</result>
+			<result name="error">/Error.jsp</result>
+		</action>
+		<action name="showfilesforprint" class="com.CloudPrinting.controller.ShowFiles">
+			<result name="success">/print.jsp</result>
+			<result name="nodatafound">/filenotfound.jsp</result>
+			<result name="error">/errorshowfiles.jsp</result>
+		</action>
+		<action name="fileupload" class="com.CloudPrinting.controller.FileUploadFormats">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">2097152</param>
+				<param name="allowedTypes">
+					image/png,image/gif,image/jpeg,image/pjpeg
+				</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success">/imageuploadsuccess.jsp</result>
+				<result name="filexistingofsamename">/fileuploadformat.jsp</result>
+				<result name="filemissing">/fileuploadformat.jsp</result>
+			<result name="input">/fileuploaderror.jsp</result>
+		</action>
+		<action name="printimage" class="com.CloudPrinting.controller.printimagefiles">
+			<result name="success">/printsuccess.jsp</result>
+			<result name="error">/Error.jsp</result>
+		</action>
+		<action name="showimagefiles" class="com.CloudPrinting.controller.showimagefiles">
+			<result name="success">/printimage.jsp</result>
+			<result name="nodatafound">/filenotfound.jsp</result>
+			<result name="error">/errorshowfiles.jsp</result>
+		</action>
+		<action name="text" class="com.CloudPrinting.controller.uploadtextfile">
+			<result name="success">/uploadtextsuccess.jsp</result>
+				<result name="filexistingofsamename">/uploadtextfile.jsp</result>
+					<result name="filemissing">/uploadtextfile.jsp</result>
+			<result name="input">/fileuploaderror.jsp</result>
+		</action>
+		<action name="showtextfiles" class="com.CloudPrinting.controller.showtextfiles">
+			<result name="success">/showtextfile.jsp</result>
+			<result name="nodatafound">/filenotfound.jsp</result>
+			<result name="error">/errorshowfiles.jsp</result>
+		</action>
+		<action name="printtext" class="com.CloudPrinting.controller.printpage">
+			<result name="success">/printsuccess.jsp</result>
+			<result name="printfailure">/printfailure.jsp</result>
+			<result name="error">/Error.jsp</result>
+		</action>
+		<action name="uploadpdf" class="com.CloudPrinting.controller.uploadpdf">
+			<result name="success">/pdfuploadsuccess.jsp</result>
+				<result name="filexistingofsamename">/uploadpdf.jsp</result>
+				<result name="filemissing">/uploadpdf.jsp</result>
+			<result name="input">/fileuploaderror.jsp</result>
+		</action>
+		<action name="pdfprint" class="com.CloudPrinting.controller.pdfprint">
+			<result name="success">/printsuccess.jsp</result>
+			<result name="error">/Error.jsp</result>
+		</action>
+			<action name="showpdffiles" class="com.CloudPrinting.controller.showpdffiles">
+			<result name="success">/showpdffiles.jsp</result>
+				<result name="nodatafound">/filesnotfound.jsp</result>
+			<result name="error">/errorshowfiles.jsp</result>
+		</action>
+		<action name="forgotpassword" class="com.CloudPrinting.controller.forgotpassword">
+			<result name="success">/forgotpasswordsuccess.jsp</result>
+			<result name="error">/forgotpassword.jsp</result>
+			<result name="NotRegistered">/forgotpassword.jsp</result>
+			<result name="emptyfield">/forgotpassword.jsp</result>
+		</action>
+	</package>
+</struts>
