@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="default" extends="struts-default">
+		<action name="login" class="com.cyber.in.Login">
+			<result name="success">/welcome.jsp</result>
+			<result name="error">/index.jsp</result>
+			<result name="input">/index.jsp</result>
+		</action>
+		<action name="register" class="com.cyber.in.Register">
+			<result name="success">/RegisterPage.jsp</result>
+			<result name="error">/RegisterPage.jsp</result>
+			<result name="input">/RegisterPage.jsp</result>
+		</action>
+		<action name="logout" class="com.cyber.in.Login" method="logout">
+			<result name="success">/index.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="post" class="com.cyber.in.ClientAccess" method="seepost">
+			<result name="postsuccess">/seepost.jsp</result>
+			<result name="posterror">/error.jsp</result>
+			<result name="notwithinsession">/error.jsp</result>
+		</action>
+
+		<action name="postsomething" class="com.cyber.in.ClientAccess"
+			method="postsomething">
+			<result name="postedsuccess">/welcome.jsp</result>
+			<result name="postederror">/welcome.jsp</result>
+		</action>
+		<action name="search" class="com.cyber.in.search">
+			<result name="posttosearchsuccess">/searchsuccess.jsp</result>
+			<result name="posttonodata">/nodata.jsp</result>
+		</action>
+
+		<action name="sent" class="com.cyber.in.sent">
+			<result name="sentpostsuccess">/sent.jsp</result>
+			<result name="sentpostnodata">/nodata.jsp</result>
+
+		</action>
+
+		<action name="approved" class="com.cyber.in.approved">
+			<result name="approvedpostsuccess">/sent.jsp</result>
+			<result name="approvedpostnodata">/nodata.jsp</result>
+		</action>
+
+		<action name="profile" class="com.cyber.in.profile">
+			<result name="posttoprofilesuccess">/profile.jsp</result>
+			<result name="postnodata">/nodata.jsp</result>
+		</action>
+		<action name="editprofile" class="com.cyber.in.editprofile">
+			<result name="editprofilesuccess">/welcome.jsp</result>
+			<result name="editprofilefailure">/profile.jsp</result>
+		</action>
+		<action name="like" class="com.cyber.in.likepost">
+			<result name="likesuccess">/seepost.jsp</result>
+			<result name="likefailure">/error.jsp </result>
+		</action>
+		<action name="unlike" class="com.cyber.in.likepost" method="unlike">
+			<result name="unlikesuccess">/seepost.jsp</result>
+			<result name="unlikefailure">/error.jsp </result>
+		</action>
+	</package>
+</struts>
