@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="CheckLogin" class="IndianOilController.DataInsertControl">
+			<result name="success">/Success.jsp</result>
+			<result name="failure">/Failure.jsp</result>
+		</action>
+		<action name="logout" class="IndianOilController.CarBookingPartA"
+			method="logout">
+			<result name="logoutsuccess">/index.jsp</result>
+		</action>
+		<action name="InsertContractorData" class="IndianOilController.DataInsertControl"
+			method="insertContractorDetail">
+			<result name="success">/Success.jsp</result>
+			<result name="failure">/Failure.jsp</result>
+		</action>
+		<action name="InsertDriverData" class="IndianOilController.DataInsertControl"
+			method="insertDriverData">
+			<result name="success">/Success.jsp</result>
+			<result name="failure">/Failure.jsp</result>
+		</action>
+		<action name="LoginLogout" class="IndianOilController.LoginLogout">
+			<result name="LoginSuccess">/LoginPage.jsp</result>
+			<result name="InvalidUser">/index.jsp</result>
+			<result name="LoginFailure">/LoginFailure.jsp</result>
+			<result name="input">/index.jsp</result>
+		</action>
+		<action name="EmployeeRequest" class="IndianOilController.CarBookingPartA">
+			<result name="BookingSuccess">/BookingSuccess.jsp</result>
+			<result name="BookingFailure">/BookingFailure.jsp</result>
+			<result name="NotInSession">/NotInSession.jsp</result>
+			<result name="RequestExists">/LoginPage.jsp</result>
+			<result name="ValidationError">/LoginPage.jsp</result>
+		</action>
+		<action name="AdminLogin" class="IndianOilController.AdminLoginLogout">
+			<result name="AdminLoginSuccess">/AdminLoginPage.jsp</result>
+			<result name="InvalidUser">/AdminLogin.jsp</result>
+			<result name="AdminLoginFailure">/LoginFailure.jsp</result>
+			<result name="ValidateFieldError">/AdminLogin.jsp</result>
+			<result name="NoDataFound">/AdminLoginPageNoData.jsp</result>
+		</action>
+		<action name="AdminLogout" class="IndianOilController.AdminLoginLogout"
+			method="adminLogout">
+			<result name="AdminLogoutSuccess">/AdminLogin.jsp</result>
+			<result name="AdminLogoutFailure">/LogoutFailure.jsp</result>
+		</action>
+		<action name="AdminRequest" class="IndianOilController.AdminRequest">
+			<result name="RejectedSuccess">/AdminLoginPage.jsp</result>
+			<result name="NoInternetConnection">/AdminLoginPage.jsp</result>
+			<result name="RejectedError">/AdminLoginPage.jsp</result>
+			<result name="ApprovedSuccess">/AdminLoginPage.jsp</result>
+			<result name="ApprovedError">/AdminLoginPage.jsp</result>
+			<result name="NotInSession">/NotInSession.jsp</result>
+			<result name="NoDataFound">/AdminLoginPageNoData.jsp</result>
+		</action>
+		<action name="ContractorLogin" class="IndianOilController.ContractorLogin">
+			<result name="ContractorSuccess">/ContractorLoginPage.jsp</result>
+			<result name="ValidateError">/ContractorLogin.jsp</result>
+			<result name="input">/ContractorLogin.jsp</result>
+			<result name="ContractorFailure">/ContractorLogin.jsp</result>
+			<result name="NoData">/ContractorLoginPageNoData.jsp</result>
+		</action>
+		<action name="ContractorLogout" class="IndianOilController.ContractorLogin"
+			method="contractorLogout">
+			<result name="ContractorLogoutSuccess">/ContractorLogin.jsp</result>
+			<result name="ContractorLogoutFailure">/ContractorLogin.jsp</result>
+		</action>
+		<action name="ContractorRequest" class="IndianOilController.ContractorApproval">
+			<result name="RejectedSuccess">/ContractorLoginPage.jsp</result>
+			<result name="NoInternetConnection">/ContractorLoginPage.jsp</result>
+			<result name="RejectedError">/ContractorLoginPage.jsp</result>
+			<result name="ApprovedSuccess">/ContractorLoginPage.jsp</result>
+			<result name="ApprovedError">/ContractorLoginPage.jsp</result>
+			<result name="NotInSession">/NotInSession.jsp</result>
+			<result name="NoDataFound">/ContractorLoginPageNoData.jsp</result>
+		</action>
+		<action name="ShowRejectedRequests" class="IndianOilController.CarBookingPartA"
+			method="showRejectedRequests">
+			<result name="success">/ShowRejectedRequest.jsp</result>
+			<result name="NoRejectedRequest">/ShowRejectedRequestNoData.jsp</result>
+			<result name="NotInSession">/NotInSession.jsp </result>
+		</action>
+		<action name="BookNow" class="IndianOilController.CarBookingPartA"
+			method="bookNow">
+			<result name="success">/LoginPage.jsp</result>
+			<result name="NotInSession">/NotInSession.jsp</result>
+		</action>
+		<action name="ShowApprovedRequests" class="IndianOilController.CarBookingPartA"
+			method="showApprovedRequests">
+			<result name="success">/ShowApprovedRequests.jsp</result>
+			<result name="NoApprovedRequest">/ShowApprovedRequestsNoData.jsp</result>
+			<result name="NotInSession">/NotInSession.jsp </result>
+		</action>
+		<action name="CheckDetails" class="IndianOilController.CarBookingPartA"
+			method="checkDetails">
+			<result name="success">/CheckDetails.jsp</result>
+			<result name="NoDetailsFound">/NoDetailsFound.jsp</result>
+			<result name="NotInSession">/NotInSession.jsp</result>
+			<result name="ValidationError">/ShowApprovedRequests.jsp</result>
+			<result name="SomeErrorOccured">/ShowApprovedRequests.jsp</result>
+		</action>
+		<action name="CheckStatus" class="IndianOilController.CarBookingPartA"
+			method="checkStatus">
+			<result name="Approved">/CheckStatus.jsp</result>
+			<result name="RejectedByAdmin">/CheckStatus.jsp</result>
+			<result name="RejectedByContractor">/CheckStatus.jsp</result>
+			<result name="InProcessing">/CheckStatus.jsp</result>
+			<result name="NoDataFound">/CheckStatus.jsp</result>
+			<result name="NotInSession">/CheckStatus.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,228 @@
+@charset "utf-8";
+body {
+	background-color: #FFc;
+	width:100%;
+	margin:auto;
+	padding:0px;
+	text-align:center;
+}
+.header{
+	 width:100%;
+	 margin-top:10px;
+	 background-color:#FFDB94;
+	 height:153px;
+	 background-repeat:repeat-x;
+	
+}
+.banner{
+margin-left:5px;
+	 width:140px;
+      	 background-color:##FFDB94;
+	 height:153px;
+	 float:left;
+}
+img.emblem{
+	margin:5px;
+	margin-top:10px;
+	margin-left:10px;
+	float:left;
+	}
+	
+img.bannertext{
+     width:auto;
+	 height:auto;
+	 float:left;
+	 margin-left:15px;
+	 margin-top:39px;
+}
+img.bannerimage{
+ height:auto;
+width:auto;
+	  float:right;
+}
+.main{
+	  padding:10px;
+	  width:98%;
+	  float:left;}
+section{
+	  width:25%;
+	  float:left;
+}
+section.left{
+	width:100%;
+
+	 float:left;
+}
+section.box{
+	 width:100%;
+	 padding-bottom:15px;
+	 border:1px solid #e4e4e4;
+	 float:left;
+	 margin-bottom:10px;
+}
+	 
+section.innerbox{
+	  width:100%; 
+	  background-image:url(images/boxiiner.jpg);
+	  background-repeat:repeat-x;
+	  text-align:center;
+	  font-family:Verdana, Geneva, sans-serif;
+	  font-size:13px;
+	  font-style:italic; 
+	  text-transform:uppercase;
+	  color:#fff;
+	  line-height:26px;
+}
+
+ul{
+	width:100%;
+	float:left;
+	margin:0px;
+	padding:0px;
+	margin-left:25px;
+}
+li{ 
+   margin-top:10px;
+   width:85%;
+   text-align:justify;
+   font-family:Verdana, Geneva, sans-serif;
+   font-size:11px;
+   color:#000;
+   list-style-image:url(images/bullet.jpg);
+}
+li.icon{
+	 width:auto;
+	 float:left; 
+	 list-style-image:none;
+	 list-style-type:none;
+	 float:left;
+	 font-family:Verdana, Geneva, sans-serif;
+	 font-size:13px;
+	 color:#000;
+	 font-style:italic;
+	 margin:0px;
+}
+p{
+	 width:100%; 
+	 font-family:Verdana, Geneva, sans-serif;
+	 font-size:12px;
+	 color:#000;
+	  text-align:justify;
+	  float:left;
+	  line-height:16px;
+}
+li.bullet{
+	   list-style-image:url(images/icon5.jpg);
+	   width:94%;
+	   font-size:12px;
+}
+a{
+	color:#000;
+	text-decoration:none;
+}
+a:hover{
+	color:red;
+	text-decoration:none;
+}
+img{
+	border:none;
+}
+.midcontent{
+	width:47%; margin-left:21px; margin-right:5px; float:left;
+}
+.midcontent_box{
+	 background-color:##ff9933;;width:100%; border-radius:7px; -webkit-border-radius:7px; -moz-border-radius:7px;  border:1px solid #e1e1e1; height:40px;
+}
+img.navicon{
+	margin-right:5px;
+}
+.nav{
+	width:auto; height:20px; margin-top:5px; font-family:verdana; font-size:13px; color:#000; font-style:italic;
+}
+span.nav1{
+	margin-right:10%;
+}
+
+.CSS_Table_Example {
+	margin:0px;padding:0px;
+	width:100%;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #000000;
+	-moz-border-radius-bottomleft:9px;
+	-webkit-border-bottom-left-radius:9px;
+	border-bottom-left-radius:9px;
+	-moz-border-radius-bottomright:9px;
+	-webkit-border-bottom-right-radius:9px;
+	border-bottom-right-radius:9px;
+	-moz-border-radius-topright:9px;
+	-webkit-border-top-right-radius:9px;
+	border-top-right-radius:9px;
+	-moz-border-radius-topleft:9px;
+	-webkit-border-top-left-radius:9px;
+	border-top-left-radius:9px;
+}.CSS_Table_Example table{
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}.CSS_Table_Example tr:last-child td:last-child {
+	-moz-border-radius-bottomright:9px;
+	-webkit-border-bottom-right-radius:9px;
+	border-bottom-right-radius:9px;
+}.CSS_Table_Example table tr:first-child td:first-child {
+	-moz-border-radius-topleft:9px;
+	-webkit-border-top-left-radius:9px;
+	border-top-left-radius:9px;
+}.CSS_Table_Example table tr:first-child td:last-child {
+	-moz-border-radius-topright:9px;
+	-webkit-border-top-right-radius:9px;
+	border-top-right-radius:9px;
+}.CSS_Table_Example tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:9px;
+	-webkit-border-bottom-left-radius:9px;
+	border-bottom-left-radius:9px;
+}.CSS_Table_Example tr:hover td{
+	background-color:#82c0ff;
+	background:-o-linear-gradient(bottom, #82c0ff 5%, #56aaff 100%);	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #82c0ff), color-stop(1, #56aaff) );
+	background:-moz-linear-gradient( center top, #82c0ff 5%, #56aaff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#82c0ff", endColorstr="#56aaff");	background: -o-linear-gradient(top,#82c0ff,56aaff);
+}.CSS_Table_Example tr:first-child td{
+	background:-o-linear-gradient(bottom, #0069d3 5%, #007fff 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0069d3), color-stop(1, #007fff) );
+	background:-moz-linear-gradient( center top, #0069d3 5%, #007fff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#0069d3", endColorstr="#007fff");	background: -o-linear-gradient(top,#0069d3,007fff);
+	background-color:#0069d3;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:18px;
+	font-family:Comic Sans MS;
+	font-weight:bold;
+	color:#ffffff;
+}.CSSTableGenerator tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #0069d3 5%, #007fff 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0069d3), color-stop(1, #007fff) );
+	background:-moz-linear-gradient( center top, #0069d3 5%, #007fff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#0069d3", endColorstr="#007fff");	background: -o-linear-gradient(top,#0069d3,007fff);
+	background-color:#0069d3;
+}.CSS_Table_Example tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}.CSS_Table_Example tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}.CSS_Table_Example td{
+	background:-o-linear-gradient(bottom, #56aaff 5%, #82c0ff 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #56aaff), color-stop(1, #82c0ff) ); 
+	background:-moz-linear-gradient( center top, #56aaff 5%, #82c0ff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#56aaff", endColorstr="#82c0ff");	background: -o-linear-gradient(top,#56aaff,82c0ff);
+	background-color:#56aaff;
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:12px;
+	font-family:Comic Sans MS;
+	font-weight:bold;
+	color:#000000;
+}.CSS_Table_Example tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.CSS_Table_Example tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.CSS_Table_Example tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
